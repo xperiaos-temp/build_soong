@@ -88,7 +88,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"GZOSP_VERSION",
+	"XPERIA_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -120,17 +120,6 @@ func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
 	fmt.Fprintln(b, "=============================================================")
-	fmt.Fprintln(b, "  @@@@@@@@  @@@@@@@@   @@@@@@    @@@@@@   @@@@@@@   ")
-	fmt.Fprintln(b, " @@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@   @@@@@@@@  ")
-	fmt.Fprintln(b, " !@@             @@!  @@!  @@@  !@@       @@!  @@@  ")
-	fmt.Fprintln(b, " !@!            !@!   !@!  @!@  !@!       !@!  @!@  ")
-	fmt.Fprintln(b, " !@! @!@!@     @!!    @!@  !@!  !!@@!!    @!@@!@!   ")
-	fmt.Fprintln(b, " !!! !!@!!    !!!     !@!  !!!   !!@!!!   !!@!!!    ")
-	fmt.Fprintln(b, " :!!   !!:   !!:      !!:  !!!       !:!  !!:       ")
-	fmt.Fprintln(b, " :!:   !::  :!:       :!:  !:!      !:!   :!:       ")
-	fmt.Fprintln(b, "  ::: ::::   :: ::::  ::::: ::  :::: ::    ::       ")
-	fmt.Fprintln(b, "  :: :: :   : :: : :   : :  :   :: : :     :        ")
-	fmt.Fprintln(b, "=============================================================")
 	fmt.Fprintf(b, "%s=%s\n", "HOST_ARCH", make_vars["HOST_ARCH"])
 	fmt.Fprintf(b, "%s=%s\n", "HOST_2ND_ARCH", make_vars["HOST_2ND_ARCH"])
 	fmt.Fprintf(b, "%s=%s\n", "HOST_OS", make_vars["HOST_OS"])
@@ -139,7 +128,7 @@ func Banner(make_vars map[string]string) string {
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_ARCH", make_vars["HOST_CROSS_ARCH"])
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_2ND_ARCH", make_vars["HOST_CROSS_2ND_ARCH"])
 	fmt.Fprintln(b, "=============================================================")
-	fmt.Fprintf(b, "%s=%s\n", "GZOSP_VERSION", make_vars["GZOSP_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "XPERIA_VERSION", make_vars["XPERIA_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "BUILD_ID", make_vars["BUILD_ID"])
 	fmt.Fprintf(b, "%s=%s\n", "OUT_DIR", make_vars["OUT_DIR"])
 	fmt.Fprintln(b, "=============================================================")

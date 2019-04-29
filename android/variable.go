@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"gzosp/soong/android"
+	"xperia/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -117,8 +117,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include Gzosp variables
-		Gzosp android.Product_variables
+		// include Xperia variables
+		Xperia android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -237,8 +237,8 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
-	// include Gzosp variables
-	Gzosp android.ProductVariables
+	// include Xperia variables
+	Xperia android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
